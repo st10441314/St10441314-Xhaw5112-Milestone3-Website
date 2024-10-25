@@ -3,133 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Short Courses</title>
+    <title>Empowering the Nation - Short Courses</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul.nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #66CDAA;
+        }
+
+        .nav li {
+            float: left;
+        }
+
+        .nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+        }
+
+        .nav li a:hover {
+            background-color: #1a2f2f;
+        }
+
+        body {
+            background: url('graduation-bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        .logo {
+            width: 200px;
+            height: auto;
+            display: block;
+            margin: 2rem auto;
+        }
+
+        .mission-statement {
+            border-radius: 25px;
+            background: #66CDAA;
+            padding: 20px;
+            width: 80%;
+            max-width: 900px;
+            margin: 2rem auto;
+            color: white;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .nav-button {
+            padding: 15px 30px;
+            border-radius: 8px;
+            background-color: #2F4F4F;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #1a2f2f;
+        }
+
+        .cart-icon {
+            float: right;
+            padding: 14px;
+            color: white;
+        }
+        body {
+          background-image: url("Media/How To Job Hunt Without A College Degree.jpeg");
+        }
+        
+        .course-title {
+            text-align: center;
+            background: white;
+            padding: 15px;
+            border-radius: 25px;
+            width: 300px;
+            margin: 2rem auto;
+            font-weight: bold;
+        }
+
+        .short-courses-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+
+        .course-header {
+            background: #66CDAA;
+            color: white;
+            padding: 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .course-content {
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            background: #f5f5f5;
+        }
+
+        .course-details {
+            list-style-type: none;
+            flex-grow: 1;
+        }
+
+        .course-details li {
+            margin: 0.5rem 0;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .course-details li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+        }
+
+        .course-fee {
+            background: #ddd;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-align: center;
+            min-width: 120px;
+        }
+    </style>
 </head>
 <body>
-    <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="short_courses.html">Short Courses</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="apply.html">Carts</a></li>
-    </ul>
-    <br>
-    <p id="rcorners1">Six-weeks Short Courses</p>
+    <nav>
+        <ul class="nav">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Courses.html">Courses</a></li>
+            <li><a href="ShortCourses.html">Short Courses</a></li>
+            <li><a href="Contact.html">Contact us</a></li>
+            <li class="cart-icon"><a href="Apply.html">🛒</a></li>
+        </ul>
+    </nav>
 
-    <div class="course-section">
-        <h2>Child Minding</h2>
-        <p>Seven-month to one year old needs</p>
-        <P>Toddler needs</P>
-        <p>Educational toys</p>
-        <h3>Price: R750</h3>
+    <h1 class="course-title">Six-week Short Courses</h1>
+
+    <div class="short-courses-container">
+        <!-- Child Minding Course -->
+        <div class="course-card">
+            <div class="course-header">Child Minding</div>
+            <div class="course-content">
+                <ul class="course-details">
+                    <li>Birth to six-month old baby needs</li>
+                    <li>Seven-month to one year old needs</li>
+                    <li>Toddler needs</li>
+                    <li>Educational toys</li>
+                </ul>
+                <div class="course-fee">Fees: R750</div>
+            </div>
+        </div>
+
+        <!-- Cooking Course -->
+        <div class="course-card">
+            <div class="course-header">Cooking</div>
+            <div class="course-content">
+                <ul class="course-details">
+                    <li>Nutritional requirements for a healthy body</li>
+                    <li>Types of protein, carbohydrates and vegetables</li>
+                    <li>Planning meals</li>
+                    <li>Preparation and cooking of meals</li>
+                </ul>
+                <div class="course-fee">Fees: R750</div>
+            </div>
+        </div>
+
+        <!-- Garden Maintenance Course -->
+        <div class="course-card">
+            <div class="course-header">Garden Maintenance</div>
+            <div class="course-content">
+                <ul class="course-details">
+                    <li>Water restrictions and the watering requirements of indigenous and exotic plants</li>
+                    <li>Pruning and propagation of plants</li>
+                    <li>Planting techniques for different plant types</li>
+                </ul>
+                <div class="course-fee">Fees: R750</div>
+            </div>
+        </div>
     </div>
-
-    <div class="course-section">
-      <h2>Cooking</h2>
-      <p>Nutritional requirements</p>
-      <P>Planning meals</P>
-      <p>Prepartion and cooking of meals</p>
-      <h3>Price: R750</h3>
-    </div>
-
-    <div class="course-section">
-      <h2>Garden Maintenance</h2>
-      <p>Water restrictions and the watering requirements of Indigenous and exotic plants</p>
-      <P>Pruning and propagation of plants</P>
-      <p>Planting techniques for different plant types</p>
-      <h3>Price: R750</h3>
-  </div>
 </body>
-
-<style>
-  h2 {
-    margin-left: auto;
-    margin-right: auto;
-    background-color:#66CDAA;
-    color: white;
-    width: 900px;
-    text-align: center;
-  }
-  div {
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: white;
-    list-style: armenian;
-    color: black;
-  }
-  p {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
-  h3 {
-    text-align: center;
-    font-style: bold;
-    font-size: large;
-  }
-  ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #66CDAA;
- }
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: #111;
-}
-body {
-  background-image: url("Media/How To Job Hunt Without A College Degree.jpeg");
-}
-#rcorners1 {
-  border-radius: 25px;
-  background: white;
-  padding: 20px; 
-  width: 300px;
-  height: 20px;
-  text-align: center;
-  color: black;
-  font-weight: bolder;
-  font-size: large; 
-  align-content: center;
-  margin-left: auto;
-  margin-right: auto; 
-}
-
-
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.button {
-  background-color: #04AA6D; /* Green */
-  border: none;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-.button1 {border-radius: 4px;}
-.button2 {border-radius: 4px;}
-    /* Style content similar to home page */
-</style>
 </html>

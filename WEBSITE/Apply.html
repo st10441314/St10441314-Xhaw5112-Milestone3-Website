@@ -3,182 +3,371 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apply</title>
+    <title>Empowering the Nation - Apply</title>
+    <style>
+        /* Include the same navigation and general styles as home page */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul.nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #66CDAA;
+        }
+
+        .nav li {
+            float: left;
+        }
+
+        .nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+        }
+
+        .nav li a:hover {
+            background-color: #1a2f2f;
+        }
+
+        body {
+            background: url('graduation-bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        .logo {
+            width: 200px;
+            height: auto;
+            display: block;
+            margin: 2rem auto;
+        }
+
+        .mission-statement {
+            border-radius: 25px;
+            background: #66CDAA;
+            padding: 20px;
+            width: 80%;
+            max-width: 900px;
+            margin: 2rem auto;
+            color: white;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .nav-button {
+            padding: 15px 30px;
+            border-radius: 8px;
+            background-color: #2F4F4F;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #1a2f2f;
+        }
+
+        .cart-icon {
+            float: right;
+            padding: 14px;
+            color: white;
+        }
+        body {
+          background-image: url("Media/How To Job Hunt Without A College Degree.jpeg");
+        }
+        
+        .apply-container {
+            display: flex;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            gap: 2rem;
+        }
+
+        .discount-box {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            flex: 1;
+            max-width: 300px;
+        }
+
+        .discount-list {
+            list-style-type: none;
+        }
+
+        .discount-list li {
+            margin: 0.8rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .discount-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0.5rem;
+        }
+
+        .selection-box {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            flex: 2;
+        }
+
+        .course-select {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .cart-items {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f5f5f5;
+            border-radius: 5px;
+            min-height: 100px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-add {
+            background: #2F4F4F;
+            color: white;
+        }
+
+        .btn-save {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .application-form {
+            display: none;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .selected-courses {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f5f5f5;
+            border-radius: 5px;
+        }
+
+        .total-price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+    </style>
 </head>
 <body>
-    <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="short_courses.html">Short Courses</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="apply.html">Carts</a></li>
-    </ul>
-    
-    <div class="discount-section">
-        <p>One course - no discount</p>
-        <p>Two courses - 5% discount</p>
-        <p>Three courses - 10% discount</p>
-        <p>More than three courses - 15% discount</p>
+    <nav>
+        <ul class="nav">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Courses.html">Courses</a></li>
+            <li><a href="ShortCourses.html">Short Courses</a></li>
+            <li><a href="Contact.html">Contact us</a></li>
+            <li class="cart-icon"><a href="Apply.html">🛒</a></li>
+        </ul>
+    </nav>
+
+    <div class="apply-container">
+        <div class="discount-box">
+            <h2>Course Discounts</h2>
+            <ul class="discount-list">
+                <li>One course – no discount</li>
+                <li>Two courses – 5% discount</li>
+                <li>Three courses – 10% discount</li>
+                <li>More than three courses – 15% discount</li>
+            </ul>
+        </div>
+
+        <div class="selection-box">
+            <select class="course-select" id="sixMonthSelect">
+                <option value="">Choose Six-Month Course</option>
+                <option value="first-aid">First Aid - R1500</option>
+                <option value="sewing">Sewing - R1500</option>
+                <option value="landscaping">Landscaping - R1500</option>
+                <option value="life-skills">Life Skills - R1500</option>
+            </select>
+
+            <select class="course-select" id="shortCourseSelect">
+                <option value="">Choose Six-Week Course</option>
+                <option value="child-minding">Child Minding - R750</option>
+                <option value="cooking">Cooking - R750</option>
+                <option value="garden">Garden Maintenance - R750</option>
+            </select>
+
+            <div class="cart-items" id="cartItems">
+                <!-- Selected courses will appear here -->
+            </div>
+
+            <div class="button-group">
+                <button class="btn btn-add" id="addToCart">Add to cart +</button>
+                <button class="btn btn-save" id="saveSelection">Save</button>
+            </div>
+
+            <button class="btn btn-add" id="applyBtn" style="margin-top: 1rem;">Apply</button>
+        </div>
     </div>
-    
-    <div class="apply-section">
-        <form id="apply-form">
-            <label for="course">Choose a Six-month Course:</label>
-            <select id="course">
-                <option value="course1">First Aid</option>
-                <option value="course2">Sewing</option>
-                <option value="course2">Landscaping</option>
-                <option value="course2">Life Skills</option>
-            </select>
-            <br>
-            <label for="course">Choose a Six-week Course:</label>
-            <select id="course">
-                <option value="course1">Child Minding</option>
-                <option value="course2">Cooking</option>
-                <option value="course2">Garden Maintenance</option>
-            </select>
-            <button type="button" onclick="addToCart()">Add to Cart</button>
+
+    <div class="application-form" id="applicationForm">
+        <h2>Application Form</h2>
+        <form id="enrollmentForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="surname">Surname</label>
+                <input type="text" id="surname" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="idNumber">ID/Passport Number</label>
+                <input type="text" id="idNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Cellphone Number</label>
+                <input type="tel" id="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="intake">Year of Intake</label>
+                <input type="number" id="intake" required min="2024">
+            </div>
+
+            <div class="selected-courses">
+                <h3>Selected Courses</h3>
+                <div id="finalCourseList"></div>
+            </div>
+
+            <div class="total-price">
+                Total Price: R<span id="totalPrice">0</span>
+            </div>
+
+            <button type="submit" class="btn btn-save">Submit Application</button>
         </form>
     </div>
-  
-    <div class="application-details">
-        <form id="details-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name"><br>
+
+    <script>
+        let selectedCourses = [];
+        let totalPrice = 0;
+
+        function updateCart() {
+            const cartItems = document.getElementById('cartItems');
+            cartItems.innerHTML = selectedCourses.map(course => `
+                <div>${course.name} - R${course.price}</div>
+            `).join('');
             
-            <label for="surname">Surname:</label>
-            <input type="text" id="surname"><br>
+            calculateTotal();
+        }
+
+        function calculateTotal() {
+            let subtotal = selectedCourses.reduce((sum, course) => sum + course.price, 0);
             
-            <label for="email">Email:</label>
-            <input type="email" id="email"><br>
-            
-            <label for="id">ID/Passport Number:</label>
-            <input type="text" id="id"><br>
-            
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone"><br>
-            
-            <label for="intake-year">Year of Intake:</label>
-            <input type="number" id="intake-year"><br>
-        </form>
-        <button onclick="saveCourses()">Save</button>
-        <button onclick="submitApplication()">Apply</button>
-    </div>
-</body>
+            // Apply discounts
+            if (selectedCourses.length >= 4) {
+                totalPrice = subtotal * 0.85; // 15% discount
+            } else if (selectedCourses.length === 3) {
+                totalPrice = subtotal * 0.9; // 10% discount
+            } else if (selectedCourses.length === 2) {
+                totalPrice = subtotal * 0.95; // 5% discount
+            } else {
+                totalPrice = subtotal;
+            }
 
-<style>
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #66CDAA;
-    }
-    li {
-        float: left;
-    }
-    li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-    li a:hover {
-        background-color: #111;
-    }
-    body {
-        background-image: url("Media/How To Job Hunt Without A College Degree.jpeg");
-    }
-    .discount-section, .apply-section, .cart-display, .application-details {
-        padding: 20px;
-        margin: 10px;
-        background: white;
-        border-radius: 10px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-</style>
+            document.getElementById('totalPrice').textContent = totalPrice.toFixed(2);
+        }
 
-<script>
-// Array to hold selected courses
-let cart = [];
-let coursePrices = {
-    "course1": 300, // Example prices, can be updated based on real courses
-    "course2": 250
-};
+        document.getElementById('addToCart').addEventListener('click', () => {
+            const sixMonthSelect = document.getElementById('sixMonthSelect');
+            const shortCourseSelect = document.getElementById('shortCourseSelect');
 
-// Function to add selected course to cart
-function addToCart() {
-    let selectedCourse = document.getElementById("course").value;
-    let courseName = document.getElementById("course").options[document.getElementById("course").selectedIndex].text;
-    
-    if (selectedCourse && !cart.includes(selectedCourse)) {
-        cart.push(selectedCourse);
-        let cartItems = document.getElementById("cart-items");
-        let price = coursePrices[selectedCourse];
-        
-        // Display the added course with price
-        let newItem = document.createElement("p");
-        newItem.textContent = ${courseName} - $${price};
-        cartItems.appendChild(newItem);
-    }
-}
+            if (sixMonthSelect.value) {
+                selectedCourses.push({
+                    name: sixMonthSelect.selectedOptions[0].text,
+                    price: 1500
+                });
+                sixMonthSelect.value = '';
+            }
 
-// Function to save courses to localStorage (or a backend if required)
-function saveCourses() {
-    if (cart.length > 0) {
-        localStorage.setItem("selectedCourses", JSON.stringify(cart));
-        alert("Courses have been saved successfully!");
-    } else {
-        alert("Please select at least one course to save.");
-    }
-}
+            if (shortCourseSelect.value) {
+                selectedCourses.push({
+                    name: shortCourseSelect.selectedOptions[0].text,
+                    price: 750
+                });
+                shortCourseSelect.value = '';
+            }
 
-// Function to submit the application
-function submitApplication() {
-    // Retrieve saved courses from localStorage
-    let savedCourses = JSON.parse(localStorage.getItem("selectedCourses"));
-    let totalCost = 0;
-
-    // Calculate the total cost based on saved courses
-    if (savedCourses) {
-        savedCourses.forEach(course => {
-            totalCost += coursePrices[course];
+            updateCart();
         });
-    }
 
-    // Form input validation (assuming inputs with these IDs exist in the HTML)
-    let name = document.getElementById("name").value;
-    let surname = document.getElementById("surname").value;
-    let email = document.getElementById("email").value;
-    let idNumber = document.getElementById("id").value;
-    let phoneNumber = document.getElementById("phone").value;
-    let intakeYear = document.getElementById("intake-year").value;
+        document.getElementById('applyBtn').addEventListener('click', () => {
+            document.getElementById('applicationForm').style.display = 'block';
+            document.getElementById('finalCourseList').innerHTML = selectedCourses
+                .map(course => `<div>${course.name}</div>`)
+                .join('');
+        });
 
-    if (!name || !surname || !email || !idNumber || !phoneNumber || !intakeYear) {
-        alert("Please fill in all required fields.");
-        return;
-    }
-
-    // Show selected courses and total price
-    let applicationSummary = `
-        Name: ${name} ${surname}
-        Email: ${email}
-        ID/Passport: ${idNumber}
-        Phone: ${phoneNumber}
-        Year of Intake: ${intakeYear}
-        Selected Courses: ${savedCourses ? savedCourses.join(", ") : "None"}
-        Total Price: $${totalCost}
-    `;
-
-    // Display an alert with the summary
-    alert(Application Summary:\n${applicationSummary}\n\Thank you for applying! The college will reach back to you in 2 weeks.);
-    
-    // Clear localStorage and cart
-    localStorage.removeItem("selectedCourses");
-    cart = [];
-    document.getElementById("cart-items").innerHTML = "";
-}
-</script>
-
+        document.getElementById('enrollmentForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your application! We will contact you within 2 weeks.');
+            // Here you would typically send the data to a server
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

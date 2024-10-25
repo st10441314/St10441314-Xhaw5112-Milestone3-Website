@@ -3,43 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Empowering The Nation - Contact Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul.nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #66CDAA;
+        }
+
+        .nav li {
+            float: left;
+        }
+
+        .nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+        }
+
+        .nav li a:hover {
+            background-color: #1a2f2f;
+        }
+
+        body {
+            background: url('graduation-bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        .logo {
+            width: 200px;
+            height: auto;
+            display: block;
+            margin: 2rem auto;
+        }
+
+        .mission-statement {
+            border-radius: 25px;
+            background: #66CDAA;
+            padding: 20px;
+            width: 80%;
+            max-width: 900px;
+            margin: 2rem auto;
+            color: white;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .nav-button {
+            padding: 15px 30px;
+            border-radius: 8px;
+            background-color: #2F4F4F;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #1a2f2f;
+        }
+
+        .cart-icon {
+            float: right;
+            padding: 14px;
+            color: white;
+        }
+        body {
+          background-image: url("Media/How To Job Hunt Without A College Degree.jpeg");
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .logo img {
+            width: 150px;
+            height: auto;
+        }
+
+        .contact-info {
+            background-color: #f5f5f5;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-item img {
+            width: 24px;
+            height: 24px;
+            margin-right: 1rem;
+        }
+
+        .contact-item a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <ul>
-        <li><a href="#Home">Home</a></li>
-        <li><a href="#Courses">Courses</a></li>
-        <li><a href="#ShortCourses">Short Courses</a></li>
-        <li><a href="#Contact">Contact</a></li>
-        <li><a href="#Apply">Carts</a></li>
-      </ul>
-    
+  <nav>
+    <ul class="nav">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Courses.html">Courses</a></li>
+        <li><a href="ShortCourses.html">Short Courses</a></li>
+        <li><a href="Contact.html">Contact us</a></li>
+        <li class="cart-icon"><a href="Apply.html">🛒</a></li>
+    </ul>
+</nav>
+
+    <div class="container">
+        <div class="logo">
+            <img src="Media/logo.png" alt="Empowering The Nation Logo">
+        </div>
+
+        <div class="contact-info">
+            <div class="contact-item">
+                <img src="Media/email.png" alt="Email">
+                <span>Email: <a href="mailto:Empoweringthenation@gmail.com">Empoweringthenation@gmail.com</a></span>
+            </div>
+
+            <div class="contact-item">
+                <img src="Media/whatsapp.png" alt="WhatsApp">
+                <span>WhatsApp: <a href="https://wa.me/0835549056">083 554 9056</a> / <a href="https://wa.me/0732248695">073 224 8695</a></span>
+            </div>
+
+            <div class="contact-item">
+                <img src="Media/instagram.png" alt="Instagram">
+                <span>Instagram: <a href="https://instagram.com/EmpoweringtheNation_Education">@EmpoweringtheNation_Education</a></span>
+            </div>
+
+            <div class="contact-item">
+                <img src="Media/facebook.png" alt="Facebook">
+                <span>Facebook: <a href="https://facebook.com/EmpoweringTheNation_Education">@EmpoweringTheNation_Education</a></span>
+            </div>
+
+            <div class="contact-item">
+                <img src="Media/x.png" alt="X">
+                <span>X: <a href="https://twitter.com/EMP_Education">@EMP_Education</a></span>
+            </div>
+
+            <div class="contact-item">
+                <img src="Media/call.png" alt="Phone">
+                <span>Phone: <a href="tel:0114155358">011 415 5358</a></span>
+            </div>
+        </div>
+    </div>
 </body>
-<style>
-    ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: #111;
-}
-
-</style>
 </html>
