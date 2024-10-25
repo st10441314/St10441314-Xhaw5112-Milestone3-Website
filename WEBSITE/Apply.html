@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply</title>
+</head>
+<body>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="short_courses.html">Short Courses</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="apply.html">Carts</a></li>
+    </ul>
+    
+    <div class="discount-section">
+        <p>One course - no discount</p>
+        <p>Two courses - 5% discount</p>
+        <p>Three courses - 10% discount</p>
+        <p>More than three courses - 15% discount</p>
+    </div>
+    
+    <div class="apply-section">
+        <form id="apply-form">
+            <label for="course">Choose a Six-month Course:</label>
+            <select id="course">
+                <option value="course1">First Aid</option>
+                <option value="course2">Sewing</option>
+                <option value="course2">Landscaping</option>
+                <option value="course2">Life Skills</option>
+            </select>
+            <br>
+            <label for="course">Choose a Six-week Course:</label>
+            <select id="course">
+                <option value="course1">Child Minding</option>
+                <option value="course2">Cooking</option>
+                <option value="course2">Garden Maintenance</option>
+            </select>
+            <button type="button" onclick="addToCart()">Add to Cart</button>
+        </form>
+    </div>
+  
+    <div class="application-details">
+        <form id="details-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name"><br>
+            
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname"><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email"><br>
+            
+            <label for="id">ID/Passport Number:</label>
+            <input type="text" id="id"><br>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone"><br>
+            
+            <label for="intake-year">Year of Intake:</label>
+            <input type="number" id="intake-year"><br>
+        </form>
+        <button onclick="saveCourses()">Save</button>
+        <button onclick="submitApplication()">Apply</button>
+    </div>
+</body>
+
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #66CDAA;
+    }
+    li {
+        float: left;
+    }
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    li a:hover {
+        background-color: #111;
+    }
+    body {
+        background-image: url("Media/How To Job Hunt Without A College Degree.jpeg");
+    }
+    .discount-section, .apply-section, .cart-display, .application-details {
+        padding: 20px;
+        margin: 10px;
+        background: white;
+        border-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<script>
+// Array to hold selected courses
+let cart = [];
+let coursePrices = {
+    "course1": 300, // Example prices, can be updated based on real courses
+    "course2": 250
+};
+
+// Function to add selected course to cart
+function addToCart() {
+    let selectedCourse = document.getElementById("course").value;
+    let courseName = document.getElementById("course").options[document.getElementById("course").selectedIndex].text;
+    
+    if (selectedCourse && !cart.includes(selectedCourse)) {
+        cart.push(selectedCourse);
+        let cartItems = document.getElementById("cart-items");
+        let price = coursePrices[selectedCourse];
+        
+        // Display the added course with price
+        let newItem = document.createElement("p");
+        newItem.textContent = ${courseName} - $${price};
+        cartItems.appendChild(newItem);
+    }
+}
+
+// Function to save courses to localStorage (or a backend if required)
+function saveCourses() {
+    if (cart.length > 0) {
+        localStorage.setItem("selectedCourses", JSON.stringify(cart));
+        alert("Courses have been saved successfully!");
+    } else {
+        alert("Please select at least one course to save.");
+    }
+}
+
+// Function to submit the application
+function submitApplication() {
+    // Retrieve saved courses from localStorage
+    let savedCourses = JSON.parse(localStorage.getItem("selectedCourses"));
+    let totalCost = 0;
+
+    // Calculate the total cost based on saved courses
+    if (savedCourses) {
+        savedCourses.forEach(course => {
+            totalCost += coursePrices[course];
+        });
+    }
+
+    // Form input validation (assuming inputs with these IDs exist in the HTML)
+    let name = document.getElementById("name").value;
+    let surname = document.getElementById("surname").value;
+    let email = document.getElementById("email").value;
+    let idNumber = document.getElementById("id").value;
+    let phoneNumber = document.getElementById("phone").value;
+    let intakeYear = document.getElementById("intake-year").value;
+
+    if (!name || !surname || !email || !idNumber || !phoneNumber || !intakeYear) {
+        alert("Please fill in all required fields.");
+        return;
+    }
+
+    // Show selected courses and total price
+    let applicationSummary = `
+        Name: ${name} ${surname}
+        Email: ${email}
+        ID/Passport: ${idNumber}
+        Phone: ${phoneNumber}
+        Year of Intake: ${intakeYear}
+        Selected Courses: ${savedCourses ? savedCourses.join(", ") : "None"}
+        Total Price: $${totalCost}
+    `;
+
+    // Display an alert with the summary
+    alert(Application Summary:\n${applicationSummary}\n\Thank you for applying! The college will reach back to you in 2 weeks.);
+    
+    // Clear localStorage and cart
+    localStorage.removeItem("selectedCourses");
+    cart = [];
+    document.getElementById("cart-items").innerHTML = "";
+}
+</script>
+
